@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color:#949494;
+    text-decoration: none;
+   
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    padding:15px;
+    background: #dcdcdc;
+    color: #8f8f8f;
+    font-family:'Lucida Sans';
+    
+}
+.header__section{
+    display: flex;
+    align-items: center;
+}
+.header__item{
+    padding: 10px 15px;
+    font-size:20px;
+    margin-left: 100px;
+}
+.headerButton:hover{
+ background-color: rgb(255, 255, 255);
+ border-radius: 8px;
+ transition: 0.5s;
+}
+.headerlogo{
+    font-weight: bolder;
+    color: #282828;
+}
+.header.button{
+    cursor:pointer;
+}
+
+
+
+.slideshow-container{
+    max-width: 1000px;
+    position:relative;
+    margin: auto;
+
+
+}
+.prev, .next {
+    cursor: pointer;
+    position:absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6% ease;
+    border-radius: 0 3px 3px 0;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot{
+    color:#474747;
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0px 6px;
+    border-radius:50%;
+    display: inline-flex;
+    transition: 0.5s;
+}
+
+.active, .dot:hover{
+    background-color: #282828;
+}
+
+.fade{
+    animation-name:fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+}
+
+@keyframes fade{
+    from{opacity: 0};
+    to{opacity: 1}
+}
+@-webkit-keyframes fade{
+    from{opacity: 0};
+    to{opacity: 1}
+}
+
+.footer {
+    background: #eaeaea;
+    color: #8f8f8f;
+    display: grid;
+    grid-template-areas: 
+    "footerLogo contacts";
+    grid-template-columns: 1fr 0.2fr ;
+    font-family:'Lucida Sans';
+    padding:10px;
+    
+}
+
+.footerLogo{
+    margin-left: 100px;
+   margin-top: 15px;
+   font-weight: bolder;
+   color: #282828;
+   
+}
+.contacts {
+    margin-top: 10px;
+}
