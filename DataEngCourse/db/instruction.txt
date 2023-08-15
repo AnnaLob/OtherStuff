@@ -1,0 +1,14 @@
+1) Зайдем в командную строку и перейдем в папку с dockerfile: cd C:\Users\Anna\Desktop\docker\db
+
+2) Создадим образ в текущей директории: docker build .
+3) Проверим, создан ли образ: docker images
+4) Запустим контейнер: docker run --rm -d -p 5432:5432 --name junior_cont (id образа)
+5) зайдем в работающий контейнер: docker exec -it (id контейнера) psql -U Anna -d junior 
+6) Выведем в командную строку список БД: \l
+7) Соединимся с БД junior: \c junior 
+8) Поработаем с БД в интерактивном режиме:
+
+  create table users (Id serial primary key, Name character varying(30), Age integer);
+  insert into users (Name, Age) values ('Tom', 33);
+  select*from users;
+9) Для добавления тома необходимо при запуске контейнера прописать команду: -v /data:/var/lib/postgresql/data
